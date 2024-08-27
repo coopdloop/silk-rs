@@ -21,9 +21,8 @@ pub async fn scrape_website(
 
     // Pre-parse the selectors and store them with their corresponding Strings
     for tag in tags_to_find {
-        let tag_clone = tag.clone();
-        let selector = Selector::parse(&tag_clone)?; // Parse the selector
-        selectors_with_tags.push((tag_clone, selector)); // Clone the tag and store both
+        let selector = Selector::parse(&tag).unwrap(); // Parse the selector
+        selectors_with_tags.push((tag, selector)); // Clone the tag and store both
     }
 
     //
