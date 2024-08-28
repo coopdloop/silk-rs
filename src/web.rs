@@ -1,5 +1,3 @@
-// src/web.rs
-
 use crate::spider;
 use std::error::Error;
 
@@ -15,6 +13,7 @@ pub async fn perform_web_scraping() -> Result<(), Box<dyn Error>> {
         "h2".to_string(),
         "img".to_string(),
         ".price".to_string(),
+        "a".to_string(),
     ];
 
     let randomize_requests = true;
